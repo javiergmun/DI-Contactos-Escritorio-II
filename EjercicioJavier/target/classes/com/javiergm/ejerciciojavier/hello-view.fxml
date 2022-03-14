@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" stylesheets="@../../../CSS/app.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javiergm.ejerciciojavier.HelloController">
+   <children>
+      <HBox fx:id="hbox1" layoutX="20.0" layoutY="350.0" prefHeight="40.0" prefWidth="250.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="346.0">
+         <children>
+            <Button fx:id="btnRefrescar" mnemonicParsing="false" onAction="#refrescarDatos" text="%btnRefrescar" />
+            <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#nuevoDatos" text="%btnNuevo" />
+            <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#eliminarDatos" text="%btnEliminar" />
+            <Button fx:id="btnGrafico" mnemonicParsing="false" onAction="#mostrarGrafico" text="%btnGrafico" />
+         </children>
+      </HBox>
+      <TableView fx:id="tabla1" layoutX="20.0" layoutY="50.0" prefHeight="300.0" prefWidth="228.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="352.0">
+        <columns>
+          <TableColumn fx:id="columnaNombre" prefWidth="110.0" text="Nombres" />
+          <TableColumn fx:id="columnaCategoria" prefWidth="120.0" text="Categorías" />
+        </columns>
+      </TableView>
+      <Label fx:id="labelProductos" layoutX="20.0" layoutY="32.0" text="Lista de productos" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="482.0" />
+      <Label fx:id="labelTablaProductos" layoutX="248.0" prefHeight="32.0" prefWidth="219.0" text="Tabla de productos" AnchorPane.leftAnchor="248.0" AnchorPane.rightAnchor="133.0">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <fx:include fx:id="appVistaDetalle" source="appVistaDetalle.fxml" />
+      <fx:include fx:id="appVistaGrafico" source="appVistaGrafico.fxml" />
+
+   </children>
+</AnchorPane>
